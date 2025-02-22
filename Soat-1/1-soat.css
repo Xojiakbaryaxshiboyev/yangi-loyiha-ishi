@@ -1,0 +1,78 @@
+/* Umumiy reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sahifa umumiy dizayni */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Soatning markaziy joylashuvi */
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Soat dizayni */
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    border: 5px solid #03dac5;
+}
+
+/* Har bir vaqt (soat, daqiqa, sekund) */
+.time {
+    position: absolute;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Animatsiya va effektlar */
+@keyframes rotateEffect {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Sekundni chiroyli aylanish effekti */
+#second {
+    color: red;
+    animation: rotateEffect 60s linear infinite;
+}
+
+/* Daqiqani aylantirish */
+#minute {
+    color: white;
+    animation: rotateEffect 3600s linear infinite;
+}
+
+/* Soatni aylantirish */
+#hour {
+    color: #03dac5;
+    animation: rotateEffect 43200s linear infinite;
+}
